@@ -1,0 +1,15 @@
+image: jasonrandrews/pico-dev:gitpod
+#tasks:
+#  - name: build sdk
+#    init: |
+#      cd /workspace
+#      sudo apt purge -y --auto-remove cmake
+#      wget -O - https://apt.kitware.com/keys/kitware-archive-latest.asc 2>/dev/null | gpg --dearmor - | sudo tee /etc/apt/trusted.gpg.d/kitware.gpg >/dev/null
+#      sudo apt-add-repository 'deb https://apt.kitware.com/ubuntu/ focal main'
+#      sudo apt update
+#      sudo apt install -y cmake
+#      wget https://raw.githubusercontent.com/raspberrypi/pico-setup/master/pico_setup.sh
+#      chmod +x /workspace/pico_setup.sh
+#      SKIP_VSCODE=1 SKIP_UART=1 ./pico_setup.sh
+#      cd dotprod-pico
+#      source ~/.bashrc

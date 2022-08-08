@@ -1,0 +1,22 @@
+FROM gitpod/workspace-base
+
+ARG DEBIAN_FRONTEND=noninteractive
+
+ARG CMSIS_5
+
+ENV USER=gitpod
+
+RUN sudo apt-get update 
+RUN sudo apt-get install -y --no-install-recommends apt-utils
+RUN sudo apt-get -y upgrade
+RUN sudo apt-get -y --no-install-recommends install sudo vim ca-certificates wget curl jq git unzip bzip2 make cmake gdb-multiarch automake autoconf libtool libftdi-dev libusb-1.0-0-dev pkg-config clang-format
+RUN sudo apt purge -y --auto-remove cmake
+RUN wget -O - https://apt.kitware.com/keys/kitware-archive-latest.asc 2>/dev/null | gpg --dearmor - | sudo tee /etc/apt/trusted.gpg.d/kitware.gpg >/dev/null
+RUN sudo apt-add-repository 'deb https://apt.kitware.com/ubuntu/ focal main'
+RUN sudo apt update
+RUN sudo apt install -y cmake
+
+RUN wget https://github.com/ARM-software/CMSIS_5/archive/refs/tags/${CMSIS_5}.zip  && unzip ${CMSIS_5}.zip && rm ${CMSIS_5}.zip && ln -s  CMSIS_5-${CMSIS_5} CMSIS_5
+RUN wget https://raw.githubusercontent.com/raspberrypi/pico-setup/master/pico_setup.sh
+RUN chmod +x /home/$USER/pico_setup.sh
+RUN SKIP_VSCODE=1 SKIP_UART=1 /home/$USER/pico_setup.sh
