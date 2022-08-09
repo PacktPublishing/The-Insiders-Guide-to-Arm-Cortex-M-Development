@@ -26,7 +26,7 @@ LDFLAGS = $(CPU_LDFLAGS)
 
 ASFLAGS = $(CPU_ASFLAGS)
 
-CMSIS_DSP_INCFILES = CMSIS_5/CMSIS/DSP/Include/
+CMSIS_DSP_INCFILES = CMSIS-DSP/Include/
 CMSIS_CORE_INCFILES = CMSIS_5/CMSIS/Core/Include/
 
 # Select build rules based on Windows or Unix
