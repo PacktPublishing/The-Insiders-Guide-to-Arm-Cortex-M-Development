@@ -202,7 +202,7 @@ void stop_dwt()
 	  PRINTF("CCNT = %u\n", CM_DWT_CYCCNT);
 }
 
-float dot_product(float v1[], float v2[], int length);
+float dot_product1(float v1[], float v2[], int length);
 float dot_product2(float v1[], float v2[], int length);
 float dot_product3(float v1[], float v2[], int length);
 
@@ -246,7 +246,7 @@ float dot_product2(float v1[], float v2[], int length)
 
 // accepts two vectors (arrays) as arguments and a length, computes and returns
 // the dot product
-float dot_product(float v1[], float v2[], int length)
+float dot_product1(float v1[], float v2[], int length)
 {
     // we compute the dot product by multiply the correspdoning elements in each 
     // array and adding them to a sum
@@ -277,7 +277,7 @@ int main()
     BOARD_InitBootClocks();
     BOARD_InitDebugConsole();
 
-    float32_t result = dot_product(srcA, srcB, MAX_BLOCKSIZE);
+    float32_t result = dot_product1(srcA, srcB, MAX_BLOCKSIZE);
     PRINTF("Dot product function complete\n");
 
     float32_t result2 = dot_product2(srcA, srcB, MAX_BLOCKSIZE);

@@ -152,7 +152,7 @@ float32_t testOutput;  /* Final ouput */
 
 
 
-float dot_product(float v1[], float v2[], int length);
+float dot_product1(float v1[], float v2[], int length);
 float dot_product2(float v1[], float v2[], int length);
 float dot_product3(float v1[], float v2[], int length);
 
@@ -196,7 +196,7 @@ float dot_product2(float v1[], float v2[], int length)
 
 // accepts two vectors (arrays) as arguments and a length, computes and returns
 // the dot product
-float dot_product(float v1[], float v2[], int length)
+float dot_product1(float v1[], float v2[], int length)
 {
     // we compute the dot product by multiply the correspdoning elements in each 
     // array and adding them to a sum
@@ -215,8 +215,8 @@ float dot_product(float v1[], float v2[], int length)
 int main() 
 {
 
-    float32_t result = dot_product(srcA, srcB, MAX_BLOCKSIZE);
-    printf("Dot product result: %f\n", result);
+    float32_t result = dot_product1(srcA, srcB, MAX_BLOCKSIZE);
+    printf("Dot product1 result: %f\n", result);
 
     result = dot_product2(srcA, srcB, MAX_BLOCKSIZE);
     printf("Dot product2 result: %f\n", result);
