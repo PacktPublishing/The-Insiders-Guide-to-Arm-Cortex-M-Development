@@ -11,5 +11,5 @@ tasks:
       wget https://raw.githubusercontent.com/raspberrypi/pico-setup/master/pico_setup.sh
       chmod +x /workspace/pico_setup.sh
       SKIP_VSCODE=1 SKIP_UART=1 ./pico_setup.sh
-      cd dotprod-pico
       source ~/.bashrc
+      cd chapter-5/dotprod-pico
