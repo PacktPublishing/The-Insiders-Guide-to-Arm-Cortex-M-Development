@@ -1,3 +1,15 @@
+
+### Get this product for $5
+
+<i>Packt is having its biggest sale of the year. Get this eBook or any other book, video, or course that you like just for $5 each</i>
+
+
+<b><p align='center'>[Buy now](https://packt.link/9781803231112)</p></b>
+
+
+<b><p align='center'>[Buy similar titles for just $5](https://subscription.packtpub.com/search)</p></b>
+
+
 # The Insider’s Guide to Arm Cortex-M Development
 
 <a href="https://www.packtpub.com/product/the-insiders-guide-to-arm-cortex-m-development/9781803231112"><img src="https://m.media-amazon.com/images/I/41dTb0TfEBL.jpg" alt="Book Name" height="256px" align="right"></a>
